@@ -167,7 +167,7 @@ class CDbFixtureManager extends CApplicationComponent
 		$schema=$this->getDbConnection()->getSchema();
 		$builder=$schema->getCommandBuilder();
 		$table=$schema->getTable($tableName);
-
+		
 		foreach(require($fileName) as $alias=>$row)
 		{
 			$builder->createInsertCommand($table,$row)->execute();

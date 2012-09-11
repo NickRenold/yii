@@ -687,6 +687,8 @@ class YiiBase
 		'CActiveFinder' => '/db/ar/CActiveFinder.php',
 		'CActiveRecord' => '/db/ar/CActiveRecord.php',
 		'CActiveRecordBehavior' => '/db/ar/CActiveRecordBehavior.php',
+		'CManyManyRelation' => '/db/ar/relations/CManyManyRelation.php',
+		'CHasManyRelation' => '/db/ar/relations/CHasManyRelation.php',
 		'CDbColumnSchema' => '/db/schema/CDbColumnSchema.php',
 		'CDbCommandBuilder' => '/db/schema/CDbCommandBuilder.php',
 		'CDbCriteria' => '/db/schema/CDbCriteria.php',
