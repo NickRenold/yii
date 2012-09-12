@@ -1943,9 +1943,9 @@ class CActiveRecordMetaData
 	 */
 	public function addRelation($name,$config)
 	{
-		if($this->$config instanceof CActiveRelation){
-			$this->relations[$name]=$config;
-		}elseif(isset($config[0],$config[1],$config[2]))  // relation class, AR class, FK
+		if($config instanceof CActiveRelation){
+			$this->relations[$config->name]=$config;
+		}else if(isset($config[0],$config[1],$config[2]))  // relation class, AR class, FK
 			$this->relations[$name]=new $config[0]($name,$config[1],$config[2],array_slice($config,3));
 		else
 			throw new CDbException(Yii::t('yii','Active record "{class}" has an invalid configuration for relation "{relation}". It must specify the relation type, the related active record class and the foreign key.', array('{class}'=>get_class($this->_model),'{relation}'=>$name)));
