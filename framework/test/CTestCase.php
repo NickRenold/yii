@@ -8,9 +8,6 @@
  * @license http://www.yiiframework.com/license/
  */
 
-// unregister Yii autoload
-spl_autoload_unregister(array('YiiBase', 'autoload'));
-
 require_once('PHPUnit/Runner/Version.php');
 require_once('PHPUnit/Autoload.php');
 
@@ -25,8 +22,3 @@ require_once('PHPUnit/Autoload.php');
 abstract class CTestCase extends PHPUnit_Framework_TestCase
 {
 }
-
-
-// re-register Yii autoload
-spl_autoload_register(array('YiiBase', 'autoload'));
-
