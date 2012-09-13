@@ -1952,7 +1952,7 @@ class CActiveRecordMetaData
 	 */
 	public function addRelation($name,$config)
 	{
-		if($config instanceof CActiveRelation){
+		if($config instanceof CBaseActiveRelation){
 			$this->relations[$config->name]=$config;
 		}else if(isset($config[0],$config[1],$config[2]))  // relation class, AR class, FK
 			$this->relations[$name]=new $config[0]($name,$config[1],$config[2],array_slice($config,3));
